@@ -1,18 +1,15 @@
-if (process.env.NODE_ENV !== "production") {
-    require('dotenv').config();
-}
-
+const config = require('./config/dev')
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = config.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
 
-const uri = process.env.ATLAS_URI;
+const uri = config.ATLAS_URI;
 mongoose.connect(uri);
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"))
