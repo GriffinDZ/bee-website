@@ -1,1 +1,1 @@
-To be written
+A MERN stack website (with Bootstrap 5) hosted on AWS. Utilizes data from the U.S. Department of Agriculture's NASS API and the Census Bureau to map the history of honey bee colonies in the U.S.
