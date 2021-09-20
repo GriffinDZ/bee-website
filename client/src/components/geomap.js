@@ -3,6 +3,7 @@ import { select, geoPath, geoAlbersUsa, scaleSequential, interpolateRgb } from '
 import axios from 'axios';
 import useResizeObserver from "../utils/useResizeObserver.js";
 import { throttle } from 'lodash';
+import config from '../dev';
 
 function GeoMap({ data, year }) {
     const svgRef = useRef();
@@ -16,7 +17,7 @@ function GeoMap({ data, year }) {
     useEffect(function getYearDataFromAPI() {
         async function fetchYearData() {
             isYearDataLoaded.current = false;
-            await axios.get(`http://localhost:5000/${year}`)
+            await axios.get(`http://${config.IP}:5000/${year}`)
                 .then(response => {
                     setYearData(response.data[0].state_values);
                 })
