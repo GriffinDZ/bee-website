@@ -5,8 +5,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  // Uses the year prior to the current one because the map uses data which is compiled at the end of each year
-  var currYear = new Date('2021-01-01T00:00:00Z');
+  var currYear = new Date('2022-01-01T00:00:00Z');
   currYear.setFullYear(currYear.getFullYear() - 1);
   const finalYearData = currYear.getFullYear();
   const [year, setYear] = useState(finalYearData);

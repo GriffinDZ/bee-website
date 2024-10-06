@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.21.4",
+    "axios": "^1.7.7",
     "bootstrap": "^5.1.1",
     "d3": "^7.0.2",
     "lodash": "^4.17.21",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
     "resize-observer-polyfill": "^1.5.1"
   },
   "scripts": {
